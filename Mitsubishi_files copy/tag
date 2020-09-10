@@ -1,0 +1,9 @@
+BrightTag.site('LAFKJA6',function(s){
+s.script('https://s.yimg.jp/images/listing/tool/cv/ytag.js').wait(function(){
+s.domready(function(){
+s.tag('\x3cscript type\x3d\x22text/javascript\x22\x3e\n        window.yjDataLayer\x3d window.yjDataLayer|| [];\n      function ytag() { yjDataLayer.push(arguments); }\n\n        ytag({\n        \x22type\x22:\x22yss_retargeting\x22,\n        \x22config\x22: {\n          \x22yahoo_ss_retargeting_id\x22: "1000380886",\n          \x22yahoo_sstag_custom_params\x22: typeof window.yahoo_sstag_params \x3d\x3d\x3d \x27undefined\x27 ? {} : window.yahoo_sstag_params\n        }\n      });\n      \x3c/script\x3e',{tagId:5048405});
+s.tag('\x3cscript type\x3d\x22text/javascript\x22\x3e\n        window.yjDataLayer\x3d window.yjDataLayer|| [];\n      function ytag() { yjDataLayer.push(arguments); }\n\n        ytag({\n        \x22type\x22:\x22yjad_retargeting\x22,\n        \x22config\x22:{\n          \x22yahoo_retargeting_id\x22: "GHBH7GCROW",\n          \x22yahoo_retargeting_label\x22: \x27\x27,\n          \x22yahoo_retargeting_page_type\x22: \x27\x27,\n          \x22yahoo_retargeting_items\x22: BrightTag.Util.map([], function(item) {\n            return {\n              item_id: item[\x27\x27],\n              category_id: item[\x27\x27],\n              price: item[\x27\x27],\n              quantity: item[\x27\x27]\n            }\n          })\n        }\n      });\n      \x3c/script\x3e',{tagId:5048415});
+s.tag('\x3c!-- Global site tag (gtag.js) - Google AdWords: 977834190 --\x3e\n\x3cscript async src\x3d\x22https://www.googletagmanager.com/gtag/js?id\x3dAW-977834190\x22\x3e\x3c/script\x3e\n\x3cscript\x3e\n  window.dataLayer \x3d window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(\x27js\x27, new Date());\n\n  gtag(\x27config\x27, \x27AW-977834190\x27);\n\x3c/script\x3e\n',{tagId:5882651});
+});
+});
+});

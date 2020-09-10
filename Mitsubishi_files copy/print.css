@@ -1,0 +1,250 @@
+@charset "utf-8";
+/*----------------------------------------
+print.css
+2016.05.09 ver.1.02
+----------------------------------------*/
+
+/*----------------------------------------
+common
+----------------------------------------*/
+body {
+  min-width: auto;
+}
+
+html,
+body {
+  height: auto;
+  min-height: 0;
+  font-size: 12pt; /* 10.5→12 */
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+footer div.container {
+  position: relative;
+  width: 700px; /* 615→700*/
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+#main {
+  float: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+* {
+  color: #000 !important;
+}
+
+header#top {
+  margin: 0;
+  min-width: auto;
+}
+
+header,
+footer {
+  min-width: 0;
+}
+
+a:hover,
+.keyword a:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+/*----------------------------------------
+article
+----------------------------------------*/
+article h1 {
+  padding: 0;
+}
+
+.article-info {
+  float: none;
+  width: 100%;
+}
+
+.main-text {
+  min-height: 0;
+  padding: 0;
+}
+
+article p.txt {
+  font-size: 100%;
+}
+
+/* photo */
+.main-text .img-center,
+.main-text .img-bottom {
+  margin: 0 0 6px !important;
+  width: 100%;
+}
+
+.img-center figure .img,
+.img-bottom figure .img {
+  width: 100%;
+  text-align: cennter;
+}
+
+.img-center figure .img img,
+.img-bottom figure .img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-center figcaption {
+  padding: 0;
+}
+
+.main-text .img-left {
+  margin: 0 6px 6px 0;
+}
+
+.main-text .img-right {
+  margin: 0 0 6px 6px;
+}
+
+.main-text .movie,
+.main-text .map {
+  margin: 0 0 12px;
+}
+
+.movie p.caption,
+.map p.caption {
+  width: 100%;
+  padding: 6px 0;
+}
+
+article figure a:hover {
+  display: inline;
+  cursor: default;
+}
+
+.img a:hover img {
+  -ms-filter: "alpha(opacity=100)";
+  opacity: 1;
+}
+
+.img .img-mask {
+  display: none;
+}
+
+a[data-lightbox="photos"] {
+  pointer-events: none !important;
+}
+
+img::selection {
+  background: transparent;
+}
+
+article iframe {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media print and (-ms-high-contrast: active), print and (-ms-high-contrast: none) {
+    .main-text .img {
+        max-width:100%!important;
+        overflow: hidden!important;
+    }
+    .main-text .img amp-img img {
+        width: auto!important;
+        height: auto!important;
+        min-width: 0!important;
+        min-height: 0!important;
+        max-width: 100%!important;
+        max-height: 100%!important;
+        position: relative!important;
+        margin-top:-25px!important;		/*This fixes the issue with 'i-amphtml-sizer'*/
+    }
+}
+
+/*----------------------------------------
+ footer
+----------------------------------------*/
+footer {
+  width: 100%;
+  padding: 10px 20px;
+  background: none;
+}
+
+footer .infomation {
+  padding-bottom:0;
+  background: #fff;
+  color: #000;
+}
+
+/*----------------------------------------
+ print none
+----------------------------------------*/
+.no-print,
+header .nav-header-box,
+header .header-search,
+header .elm-right,
+header .header-main ul,
+header .main-navi,
+header .sub-navi,
+.alert-info,
+.alert-gogai,
+.alert-gogai-en,
+.alert-quake,
+.alert-box,
+.alert-box.box-blue,
+#EarthquakeBox,
+article header .sub,
+article header nav,
+article .header-box ul,
+header .channel,
+.main-text .article-links,
+ul.channel-list,
+article .list-typeD,
+.main-text #tools,
+.movie,
+.img .img-zoom,
+.series-info,
+aside.nav,
+aside.ad,
+.links,
+.comment,
+.recommend,
+.contents-end,
+footer .nav,
+footer .sitemap,
+footer .infomation .col-set,
+footer .infomation ul,
+footer .infomation .logo,
+.ad,
+.ad-rec,
+#sub,
+#cxOverlayParent,
+#cxPageBottomBnr,
+#cxPageBottomBnr,
+#cxPageModalBnr,
+#cxArticleBnr,
+iframe,
+.OUTBRAIN {
+  display: none !important;
+}
+
+article {
+  background: transparent none;
+}
+.article-infoBox .sub{
+  display: none;
+}
+/*----------------------------------------
+ footer
+----------------------------------------*/
+footer {
+  width: 100%;
+  margin: 12px auto 0;
+  padding: 12px 10px;
+  border-top: 1px solid #ccc;
+  font-size: 75%;
+}
