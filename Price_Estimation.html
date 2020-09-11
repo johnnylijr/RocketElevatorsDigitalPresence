@@ -31,7 +31,7 @@
     <link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme">
         
 	<!-- JQUERY -->
-	<script src="./Landing_Residential_files/jquery.min.js" type="text/javascript"></script>
+	<script src="./Price_Estimation_files/jquery.min.js" type="text/javascript"></script>
 
 		<!-- SLIDE TOP -->
 		<div id="slidetop">
@@ -396,8 +396,8 @@
 									<li class="dropdown"><!-- SERVICES -->
 										<a href="./Rocket-Elevators.html#services">SERVICES
 												<ul class="dropdown-menu">
-													<li><a href="./Landing_Residential.html">Residential Buildings</a></li>
-												    <li><a href="./Landing_Corporate.html">Corporate Buildings</a></li>
+													<li><a href="./Price_Estimation.html">Residential Buildings</a></li>
+												    <li><a href="./Price_Estimation.html">Corporate Buildings</a></li>
 												</ul>
 										</a>								
 									</li>
@@ -431,6 +431,16 @@
 				<!-- /Top Nav -->
         </div>
 
+    <!-- Parallax -->
+		<section class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
+			<div class="overlay dark-3"></div>
+			<div class="container">
+			    <div class="text-center">
+				<h2 class="fs-40 fw-300">Elevating to New Heights Since 1976</h2>
+			</div>
+		</section>
+    <!-- /Parallax -->
+
     <form id="form">
         <p style="font-size: 35px; font-style: bold;">Price Estimation Form</p>
         <p style="font-size: 20px;">Please select your desired options</p>
@@ -442,40 +452,40 @@
             <option name="corporate" value="corporate">Corporate</option>
             <option name="hybrid" value="hybrid">Hybrid</option>
         </select><br><br>
-        <img class="center" id="residential" src="./Landing_Residential_files/" alt="Residential Building" width="400" selected="true" style="display: block;">
-        <img class="center" id="commercial" src="./Landing_Residential_files/commercialBuilding.jpeg" alt="Commercial Building" width="400">
-        <img class="center" id="corporate" src="./Landing_Residential_files/corporateBuilding.jpeg" alt="Corporate Building" width="400">
-        <img class="center" id="hybrid" src="./Landing_Residential_files/hybridBuilding.jpeg" alt="Hybrid Building" width="400">
+        <img class="center" id="residential" src="./Price_Estimation_files" alt="Residential Building" width="400" selected="true" style="display: block;">
+        <img class="center" id="commercial" src="./Price_Estimation_files/commercialBuilding.jpeg" alt="Commercial Building" width="400">
+        <img class="center" id="corporate" src="./Price_Estimation_files/corporateBuilding.jpeg" alt="Corporate Building" width="400">
+        <img class="center" id="hybrid" src="./Price_Estimation_files/hybridBuilding.jpeg" alt="Hybrid Building" width="400">
         <div id="residentialDiv" style="display: inline;">
-            Number of appartments: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="appartmentsNbrRES" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Number of apartments: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="appartmentsNbrRES" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of floors: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="floorsNbrRES" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="basementsNbrRES" min="0" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <div id="commercialDiv">
+            Number of distinct businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateBusinessesNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of floors: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="floorsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="basementsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of separate businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateBusinessesNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of available parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of elevator shafts: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="elevatorsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Number of parking space available: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Number of elevator cages: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="elevatorsNbrCOM" min="0" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <div id="corporateDiv">
+            Number of distinct tenant companies: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateRentalCompaniesNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of floors: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="floorsNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="basementsNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of available parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of separate rental companies: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateRentalCompaniesNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Maximum amount of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="occupantsPerFloorNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Number of parking space available: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Maximum number of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="occupantsPerFloorNbrCOR" min="0" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <div id="hybridDiv">
+            Number of distinct businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateBusinessesNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of floors: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="floorsNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="basementsNbrHYB"><br>
-            Number of available parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of separate businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="seperateBusinessesNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Maximum amount of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="occupantsPerFloorNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Active/busy hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value &gt; 24) document.getElementById(&#39;number24&#39;).value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
+            Number of parking space available: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Maximum number of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="occupantsPerFloorNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
+            Number of hours of activity in the building: <input placeholder="0" id="number24" type="number" onchange="if (this.value &gt; 24) document.getElementById(&#39;number24&#39;).value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <br>
-        Recommended amount of elevators: <input placeholder="0" id="recommendedShafts" value="0" type="number" disabled=""><br>
-        Select an elevator range<br>
+        Recommended number of elevators: <input placeholder="0" id="recommendedShafts" value="0" type="number" disabled=""><br>
+        Select an elevator service<br>
         <input type="radio" name="quality" onchange="setRecommendedShafts(), setPrices();" value="standard">Standard
         <br>
         <input type="radio" name="quality" onchange="setRecommendedShafts(), setPrices();" value="premium">Premium
@@ -485,13 +495,14 @@
         
     </form>
     <div style="text-align: center;">
-        Price for 1 elevator unit: <input id="priceUnit" placeholder="$0" type="text" disabled=""><br>
+        Unit cost of an elevator: <input id="priceUnit" placeholder="$0" type="text" disabled=""><br>
         Installation costs: <input id="costInstallations" placeholder="$0" type="text" disabled=""><br>
-        Total cost: <input id="costTotal" placeholder="$0" type="text" disabled=""><br>
+        Total costs: <input id="costTotal" placeholder="$0" type="text" disabled=""><br>
     </div>
 
     <div class="h-100"></div>
 
+            
 			<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
@@ -559,6 +570,6 @@
     </script>
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="./Landing_Residential_files/jquery-3.3.1.min.js"></script>
-		<script src="./Landing_Residential_files/scripts.js"></script>
-<script type="text/javascript" src="./Landing_Residential_files/bootstrap.min.js"></script><script type="text/javascript" src="./Landing_Residential_files/jquery.nav.min.js"></script></body></html>
+		<script src="./Price_Estimation_files/jquery-3.3.1.min.js"></script>
+		<script src="./Price_Estimation_files/scripts.js"></script>
+<script type="text/javascript" src="./Price_Estimation_files/bootstrap.min.js"></script><script type="text/javascript" src="./Price_Estimation_files/jquery.nav.min.js"></script></body></html>
