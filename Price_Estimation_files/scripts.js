@@ -1,42 +1,6 @@
-/** ********************************************** **
-	@Author			Dorin Grigoras
-	@Website		www.stepofweb.com
-	@Last Update	Thursay, February 22, 2018
-
-	NOTE! 	Do not change anything here if you want to
-			be able to update in the future! Please use
-			your custom script (eg. custom.js).
-
-
-	TABLE CONTENTS
-	-------------------------------
-
-
-	INLINE SCRIPTS
-	-------------------------------
-		COUNT TO
-			https://github.com/mhuggins/jquery-countTo
-
-		BROWSER DETECT
-
-		Appear
-			https://github.com/bas2k/jquery.appear/
-			
-		Parallax v1.1.3
-			http://www.ianlunn.co.uk/plugins/jquery-parallax/
-
-		jQuery Easing v1.3
-			http://gsgd.co.uk/sandbox/jquery/easing/
-
-		WOW - v1.0.3
-			http://mynameismatthieu.com/WOW/
-
-		Modernizr 3.3.1
-			http://modernizr.com/download/#-csstransforms3d-csstransitions-video-touch-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
-
-		Popper - required by bootstrap
-		https://popper.js.org/
-*************************************************** **/
+/**
+	@Author			Johnny
+**/
 	window.width 	= jQuery(window).width();
 	window.height 	= jQuery(window).height();
 
@@ -44,21 +8,16 @@
 	/* Init */
 	jQuery(window).ready(function () {
 
-		// jQuery 3.x do no support size() - should be replaceced with .length
-		// We use this hack to make old plugins working
 		jQuery.fn.extend({
 		  size: function() {
 		    return this.length;
 		  }
 		});
 
-		// Popper user by Bootstrap
 		_loadPopperBS4();
 
-		// Load Bootstrap JS
 		loadScript(plugin_path + 'bootstrap/js/bootstrap.min.js', function() {
 
-			// Load Material Design Js
 			if(jQuery("body").hasClass('enable-materialdesign')) {
 				loadScript(plugin_path + 'mdl/material.min.js');
 			}
@@ -1684,9 +1643,7 @@
 
 
 
-		/** Slider Parallax 
-			Do not use overlay - will be very slow!
-		 **************************** **/
+		/**  **/
 		var _slider = jQuery('#slider');
 
 		if(_slider.length > 0) {
