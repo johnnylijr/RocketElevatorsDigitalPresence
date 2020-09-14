@@ -128,6 +128,81 @@
 	
 			</div>
 			<!-- /SLIDE TOP -->
+
+			<!-- wrapper -->
+				<div id="wrapper">
+					<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+		
+						<!-- TOP NAV -->
+						<header id="topNav">
+							<div class="container">
+		
+								<!-- Mobile Menu Button -->
+								<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+									<i class="fa fa-bars"></i>
+								</button>
+		
+								<!-- Logo -->
+								<a class="logo float-left scrollTo" href="#top">
+									<img src="RE_Assets/R2.png" alt="" />
+								</a>
+								<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+									<nav class="nav-main">
+										<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+											<li class="active"><!-- HOME -->
+												<a href="./Rocket-Elevators.html#top">
+													HOME
+												</a>
+											</li>
+											<li class="dropdown"><!-- SERVICES -->
+												<a href="./Rocket-Elevators.html#services">SERVICES
+														<ul class="dropdown-menu">
+															<li><a href="./Landing_Residential.html">Residential Buildings</a></li>
+															<li><a href="./Price_Estimation.html">Corporate Buildings</a></li>
+														</ul>
+												</a>								
+											</li>
+											<li><!-- WORK -->
+												<a href="./Rocket-Elevators.html#work">
+													PORTFOLIO
+												</a>
+											</li>
+											<li><!-- NEWS -->
+												<a href="./Rocket-Elevators.html#news">
+													NEWS
+												</a>
+											</li>
+											<li><!-- CLIENTS -->
+												<a href="./Rocket-Elevators.html#clients">
+													CLIENTS
+												</a>
+											</li>
+											<li><!-- CONTACT -->
+												<a href="./Rocket-Elevators.html#contact">
+													CONTACT
+												</a>
+											</li>
+										</ul>
+		
+									</nav>
+								</div>
+		
+							</div>
+						</header>
+						<!-- /Top Nav -->
+		
+					</div>
+		
+		
+					<!-- BUTTON CALLOUT -->
+					<a href="#" class="btn btn-xlg btn-info fs-20 fullwidth m-0 rad-0 p-40">
+						<span class="font-lato fs-30">
+							We elevate cities, we elevate you. 
+						</span>
+					</a>
+					<!-- /BUTTON CALLOUT -->
+
+			
 	</head>
 
 
@@ -156,27 +231,27 @@
 
  	<div id="myDIV_1">
 	Number of apartments<br>
- 	<input id="NberApartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
+ 	<input id="NberApartment"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
 	</div>
 
 	<div id="myDIV_2">
-	Number of floors<br>
- 	<input id="NbreFloor"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
+	Number of floors (excluding basement)<br>
+ 	<input id="NberFloors"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
 	</div>
 
 	<div id="myDIV_3">
 	Number of basements<br>
-	<input id="NbreBasements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
+	<input id="NberBasements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
 	</div> 
 
 	<div id="myDIV_4">
 	Number of distinct businesses<br>
- 	<input id="NbreSeparateBusiness"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
+ 	<input id="NberDistinctBusiness"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
 	</div>
 
 	<div id="myDIV_5">
 	Number of parking space available<br>
- 	<input id="NbreParking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
+ 	<input id="NberParking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
 	</div>
 
 	<div id="myDIV_6">
@@ -186,21 +261,21 @@
 
 	<div id="myDIV_7">
 	Number of distinct tenant companies<br>
- 	<input id="NbreRentalCompagnies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
+ 	<input id="NberTenantCompanies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
 	</div>
 
 	<div id="myDIV_8">
 	Number of occupants per floor<br>
- 	<input id="NbreMaxPersonByfloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
+ 	<input id="NberMaxPersonByfloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
 	</div>
 
 	<div id="myDIV_9">
 	Number of hours of activity of the building<br>
- 	<input id="NbreHoursActivity"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
+ 	<input id="NberHoursActivity"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
 	</div>
 
 	<div id="myDIV_10">
-	Recommended number of elevators: <input id="ResultatAscenseur"    type="number" name="" value=""  disabled>   
+	Recommended number of elevators: <input id="ResultsElevator"    type="number" name="" value=""  disabled>   
 	</div>
 
 	<br>
@@ -234,50 +309,44 @@
 	
    var service =  MaFonctionDeSelection();  
    
-   
    if ( service == 1 )
    {
 	  ResultNumberResidentialElevators(); 
    }
-   
    if ( service == 2 )
    {
-	  ResultNumberCommercialElevators(); 
-	  
+	  ResultNumberCommercialElevators();  
    }
-   
    if ( service == 3 )
    {
 	  ResultNumberCorporateElevators(); 
    }
-   
    if ( service == 4 )
    {
 	  ResultNumberCorporateElevators(); 
-   }
-   
+	}
 }
 </script>
 
-<!--Formule  Residentiel Nombre Ascenseurs -->
+<!-- Residential Number of Elevators -->
 <script>
 	function ResultNumberResidentialElevators() {
 	   
 		
 	
-		var x = document.getElementById("NberApartement").value || 0 ;
-		var y = document.getElementById("NbreFloor").value || 0 ;
-		var z = document.getElementById("NbreBasements").value || 0;
-		var Nber = Math.ceil( x /(y*6) ); 
+		var NberApartment = document.getElementById("NberApartment").value || 0 ;
+		var NberFloors = document.getElementById("NberFloors").value || 0 ;
+		var NberBasements = document.getElementById("NberBasements").value || 0;
+		var Nber = Math.ceil( NberApartment /(NberFloors*6) ); 
 			  
 			   
-		var colonne =  Math.ceil(y /20);
+		var column =  Math.ceil(NberFloors /20);
 		  
-		var  NberElevators = Nber*colonne;
-		if (x != 0  && y != 0   && z  != 0  )
-		{document.getElementById("ResultatAscenseur").value= NberElevators;}
+		var  NberElevators = Nber*column;
+		if (NberApartment != 0  && NberFloors != 0   && NberBasements  != 0  )
+		{document.getElementById("ResultsElevator").value= NberElevators;}
 		else {
-				document.getElementById("ResultatAscenseur").value = 0;
+				document.getElementById("ResultsElevator").value = 0;
 			    }
 		
 		return NberElevators;
@@ -285,61 +354,58 @@
 	}
 	</script>
 
-<!--Formule  Commercial Nombre Ascenseurs -->
+<!-- Commerical Number of Elevators -->
+
 <script>
 	function ResultNumberCommercialElevators() {
-		       var c5 =   document.getElementById ("NbreParking").value || 0 ;
-			   var  b =   document.getElementById ("NbreBasements").value || 0 ;
-			   var  f =   document.getElementById (	"NbreFloor").value 	|| 0 ;
-			   var  c4 =   document.getElementById ("NbreSeparateBusiness").value ||  0 ;
+			   var NberApartment = document.getElementById("NberApartment").value || 0 ;
+		       var NberParking = document.getElementById ("NberParking").value || 0 ;
+			   var NberBasements = document.getElementById ("NberBasements").value || 0 ;
+			   var NberFloors = document.getElementById ("NberFloors").value 	|| 0 ;
+			   var NberDistinctBusiness = document.getElementById ("NberDistinctBusiness").value ||  0 ;
 
-			    var x = document.getElementById("NberCage").value || 0;
+			    var NberApartment = document.getElementById("NberCage").value || 0;
 			
-			if (c5 != 0  && b != 0   && f  != 0  &&  c4 != 0      )
-			 {document.getElementById("ResultatAscenseur").value = x;}
+			if (NberParking != 0  && NberBasements != 0   && NberFloors  != 0  &&  NberDistinctBusiness != 0      )
+			 {document.getElementById("ResultsElevator").value = NberApartment;}
 	        else {
-				document.getElementById("ResultatAscenseur").value = 0;
+				document.getElementById("ResultsElevator").value = 0;
 			    }
-				return x;
+				return NberApartment;
 		}												
 </script>
 
-<!--Formule  Corporate et Hybride Nombre Ascenseurs -->
+<!-- Corporate and Hybrid Number of Elevators -->
+
 <script>
 	function ResultNumberCorporateElevators() {
 	   service = MaFonctionDeSelection();
 
-		var Fc =  document.getElementById("NbreFloor").value  || 0 ;
-		var F = Number(document.getElementById("NbreFloor").value || 0  );
+		var Floor =  document.getElementById("NberFloors").value  || 0 ;
+		var NberFloors = Number(document.getElementById("NberFloors").value || 0  );
 		
-		var Bc =   document.getElementById("NbreBasements").value;
-		var B = Number(document.getElementById("NbreBasements").value || 0 );
+		var Basement =   document.getElementById("NberBasements").value;
+		var NberBasements = Number(document.getElementById("NberBasements").value || 0 );
 
-		var M = document.getElementById("NbreMaxPersonByfloor").value || 0 ;
-		var SB = document.getElementById("NbreSeparateBusiness").value || 0 ;
-		var P = document.getElementById("NbreParking").value || 0 ;
-		var H = document.getElementById("NbreHoursActivity").value || 0 ;
-		var R = document.getElementById("NbreRentalCompagnies").value || 0 ;
+		var NberMaxPersonByfloor = document.getElementById("NberMaxPersonByfloor").value || 0 ;
+		var NberDistinctBusiness = document.getElementById("NberDistinctBusiness").value || 0 ;
+		var NberParking = document.getElementById("NberParking").value || 0 ;
+		var NberHoursActivity = document.getElementById("NberHoursActivity").value || 0 ;
+		var NberTenantCompanies = document.getElementById("NberTenantCompanies").value || 0 ;
 	   
 	   
-		var Nber = Math.ceil( M*(F+B)/1000 ); 
+		var Nber = Math.ceil( NberMaxPersonByfloor*(NberFloors+NberBasements)/1000 ); 
 		
 												
-		var colonne =  Math.ceil((F+B)/20);
+		var column =  Math.ceil((NberFloors+NberBasements)/20);
 	 
-		var NberResultElevatorsByCol =  Math.ceil(Nber/colonne);
+		var NberResultElevatorsByCol =  Math.ceil(Nber/column);
 	   
-		var NberElevators=   NberResultElevatorsByCol*colonne;        
+		var NberElevators=   NberResultElevatorsByCol*column;        
 		console.log(service);
 		
 		
-			 document.getElementById("ResultatAscenseur").value = NberElevators;  
-	   
-		
-			
-
-		
-		
+			 document.getElementById("ResultsElevator").value = NberElevators;  
 		
 		
 		return NberElevators;
@@ -361,21 +427,14 @@
 
 		 if (service == 3 || service == 4 )  {
 		 var NumberCorporateElevators = ResultNumberCorporateElevators();
-											 }
-		 
-											
-											
+											 }								
 											
 		 var PriceInstallElevators;							   
 		 var TotalCost;
 		 
-		
-		 
-		 
 		 if  (document.getElementById("PriceUnitStandard").checked) { 
 	   
-		 
-		 
+
 		 document.getElementById("PriceUnit").value="7565.00";
 		 PriceInstallElevators =  7565*0.10*NumberCorporateElevators;
 		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
@@ -385,7 +444,7 @@
 		 TotalCost = TotalCost.toFixed(2);
 										 
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
-		document.getElementById("TotalCost").value = TotalCost;
+		 document.getElementById("TotalCost").value = TotalCost;
 							} 
 		 
 		 if  (document.getElementById("PriceUnitPremium").checked)	{ 		               
@@ -394,7 +453,7 @@
 		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
 		 
 		 
-		 TotalCost = 7565*1.13*NumberCorporateElevators;
+		 TotalCost = 12345*1.13*NumberCorporateElevators;
 		 TotalCost = TotalCost.toFixed(2);
 									   
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
@@ -408,11 +467,11 @@
 		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
 		
 		 
-		 TotalCost = 7565*1.16*NumberCorporateElevators;
+		 TotalCost = 15400*1.16*NumberCorporateElevators;
 		 TotalCost = TotalCost.toFixed(2);
 										 
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
-		document.getElementById("TotalCost").value = TotalCost;
+		 document.getElementById("TotalCost").value = TotalCost;
 								 }
 	
 	}
@@ -422,128 +481,64 @@
 function AddElementDiv1() {
     document.getElementById("myDIV_1").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv2() {
     document.getElementById("myDIV_2").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv3() {
     document.getElementById("myDIV_3").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv4() {
     document.getElementById("myDIV_4").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv5() {
     document.getElementById("myDIV_5").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv6() {
     document.getElementById("myDIV_6").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv7() {
     document.getElementById("myDIV_7").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv8() {
     document.getElementById("myDIV_8").style.display = "block";
 }
-</script>
-
-<script>
 function AddElementDiv9() {
     document.getElementById("myDIV_9").style.display = "block";
 }
-</script>
-
-<script>
 	function AddElementDiv10() {
 		document.getElementById("myDIV_10").style.display = "block";
 	}
-</script>
-
-<script>
 function RemoveElementDiv1() {
     document.getElementById("myDIV_1").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv2() {
     document.getElementById("myDIV_2").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv3() {
     document.getElementById("myDIV_3").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv4() {
     document.getElementById("myDIV_4").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv5() {
     document.getElementById("myDIV_5").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv6() {
     document.getElementById("myDIV_6").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv7() {
     document.getElementById("myDIV_7").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv8() {
     document.getElementById("myDIV_8").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv9() {
     document.getElementById("myDIV_9").style.display = "none";
 }
-</script>
-
-<script>
 function RemoveElementDiv10() {
     document.getElementById("myDIV_10").style.display = "none";
 }
 </script>
-
-
-
-<!-- Selon la sélection du menu déroulant (Rés., Com., Corp., ou Hybride)  les 
-champs de leurs paramètres vont apparaîtres avec l'appel des fonctions  
-'AddElementDiv() et RemoveElementDiv2(). Par défaut dans le fichier .css leur 
-valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: none; -->
 
 <script>
 	function TriEnlever( )
@@ -551,8 +546,6 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
     
     
     if (MaFonctionDeSelection()  === 0)  {
-         
-         
         
          RemoveElementDiv1();
          RemoveElementDiv2();
@@ -622,31 +615,27 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
          								RemoveElementDiv7();
                                         		}
          								                             
-		document.getElementById("NberApartement" ).value = ""; 
-		document.getElementById("NbreFloor" ).value = "";
-		document.getElementById("NbreBasements" ).value = ""; 
-		document.getElementById("NbreSeparateBusiness" ).value = "";
-		document.getElementById("NbreParking" ).value = ""; 
-		document.getElementById( "NberCage").value = "";
-		document.getElementById("NbreRentalCompagnies" ).value = ""; 
-		document.getElementById("NbreMaxPersonByfloor"  ).value = "";
-		document.getElementById( "NbreHoursActivity").value = ""; 
-		document.getElementById("ResultatAscenseur" ).value = "";
-
+		document.getElementById("NberApartment" ).value = ""; 
+		document.getElementById("NberFloors" ).value = "";
+		document.getElementById("NberBasements" ).value = ""; 
+		document.getElementById("NberDistinctBusiness" ).value = "";
+		document.getElementById("NberParking" ).value = ""; 
+		document.getElementById("NberCage").value = "";
+		document.getElementById("NberTenantCompanies" ).value = ""; 
+		document.getElementById("NberMaxPersonByfloor"  ).value = "";
+		document.getElementById("NberHoursActivity").value = ""; 
+		document.getElementById("ResultsElevator" ).value = "";
 
 }
 </script>
-
-
 						</div>
 
 					</div>
 				</div>
 			</section>
-            <!-- /RESIDENTIAL -->
             
 		</div>
-		<!-- /wrapper -->
+		<!-- /Wrapper -->
 
 		<!-- SCROLL TO TOP -->
 		<a href="#" id="toTop"></a>
