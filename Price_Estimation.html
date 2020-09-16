@@ -143,14 +143,14 @@
 								</button>
 		
 								<!-- Logo -->
-								<a class="logo float-left scrollTo" href="#top">
+								<a class="logo float-left scrollTo" href="https://www.rocketelevatorsjohnny.com">
 									<img src="RE_Assets/R2.png" alt="" />
 								</a>
 								<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 									<nav class="nav-main">
 										<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 											<li class="active"><!-- HOME -->
-												<a href="./Rocket-Elevators.html#top">
+												<a href="https://www.rocketelevatorsjohnny.com">
 													HOME
 												</a>
 											</li>
@@ -158,7 +158,7 @@
 												<a href="./Rocket-Elevators.html#services">SERVICES
 														<ul class="dropdown-menu">
 															<li><a href="./Landing_Residential.html">Residential Buildings</a></li>
-															<li><a href="./Price_Estimation.html">Corporate Buildings</a></li>
+															<li><a href="./Landing_Corporate.html">Corporate Buildings</a></li>
 														</ul>
 												</a>								
 											</li>
@@ -222,7 +222,7 @@
   		<br><br>
  
 	<script>
-	function MaFonctionDeSelection() {
+	function SelectionFunction() {
     	var x = document.getElementById("mySelect");
     	var i = x.selectedIndex;
     	return i;
@@ -235,7 +235,7 @@
 	</div>
 
 	<div id="myDIV_2">
-	Number of floors (excluding basement)<br>
+	Number of floors (including basements)<br>
  	<input id="NberFloors"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
 	</div>
 
@@ -307,7 +307,7 @@
 
 	function FormulesSelected()  {
 	
-   var service =  MaFonctionDeSelection();  
+   var service =  SelectionFunction();  
    
    if ( service == 1 )
    {
@@ -337,11 +337,10 @@
 		var NberApartment = document.getElementById("NberApartment").value || 0 ;
 		var NberFloors = document.getElementById("NberFloors").value || 0 ;
 		var NberBasements = document.getElementById("NberBasements").value || 0;
-		var Nber = Math.ceil( NberApartment /(NberFloors*6) ); 
+		var NberFloorsExcludingBasement = NberFloors-NberBasements;
+		var Nber = Math.ceil( NberApartment /(NberFloorsExcludingBasement*6) ); 
 			  
-			   
 		var column =  Math.ceil(NberFloors /20);
-		  
 		var  NberElevators = Nber*column;
 		if (NberApartment != 0  && NberFloors != 0   && NberBasements  != 0  )
 		{document.getElementById("ResultsElevator").value= NberElevators;}
@@ -363,23 +362,21 @@
 			   var NberBasements = document.getElementById ("NberBasements").value || 0 ;
 			   var NberFloors = document.getElementById ("NberFloors").value 	|| 0 ;
 			   var NberDistinctBusiness = document.getElementById ("NberDistinctBusiness").value ||  0 ;
-
-			    var NberApartment = document.getElementById("NberCage").value || 0;
+			   var NberCage = document.getElementById("NberCage").value || 0;
 			
 			if (NberParking != 0  && NberBasements != 0   && NberFloors  != 0  &&  NberDistinctBusiness != 0      )
-			 {document.getElementById("ResultsElevator").value = NberApartment;}
-	        else {
-				document.getElementById("ResultsElevator").value = 0;
-			    }
-				return NberApartment;
-		}												
+			 {document.getElementById("ResultsElevator").value = NberCage;}
+	        else
+		     {document.getElementById("ResultsElevator").value = NberCage;}
+			return NberCage;
+			 }												
 </script>
 
 <!-- Corporate and Hybrid Number of Elevators -->
 
 <script>
 	function ResultNumberCorporateElevators() {
-	   service = MaFonctionDeSelection();
+	   service = SelectionFunction();
 
 		var Floor =  document.getElementById("NberFloors").value  || 0 ;
 		var NberFloors = Number(document.getElementById("NberFloors").value || 0  );
@@ -394,14 +391,14 @@
 		var NberTenantCompanies = document.getElementById("NberTenantCompanies").value || 0 ;
 	   
 	   
-		var Nber = Math.ceil( NberMaxPersonByfloor*(NberFloors+NberBasements)/1000 ); 
+		var Nber = Math.ceil( NberMaxPersonByfloor*(NberFloors)/1000 ); 
 		
 												
-		var column =  Math.ceil((NberFloors+NberBasements)/20);
+		var column =  Math.ceil((NberFloors)/20);
 	 
 		var NberResultElevatorsByCol =  Math.ceil(Nber/column);
 	   
-		var NberElevators=   NberResultElevatorsByCol*column;        
+		var NberElevators = NberResultElevatorsByCol*column;        
 		console.log(service);
 		
 		
@@ -415,7 +412,7 @@
 
 <script>
 	function Price()  {
-		 var service = MaFonctionDeSelection();
+		 var service = SelectionFunction();
 		 
 		 
 		 if (service == 1)  {
@@ -545,7 +542,7 @@ function RemoveElementDiv10() {
  {
     
     
-    if (MaFonctionDeSelection()  === 0)  {
+    if (SelectionFunction()  === 0)  {
         
          RemoveElementDiv1();
          RemoveElementDiv2();
@@ -558,7 +555,7 @@ function RemoveElementDiv10() {
          RemoveElementDiv9(); 
 		 RemoveElementDiv10(); 								}  
     
-    if	(MaFonctionDeSelection() === 1)	{
+    if	(SelectionFunction() === 1)	{
         
     				
         AddElementDiv1();
@@ -572,7 +569,7 @@ function RemoveElementDiv10() {
         RemoveElementDiv8();
         RemoveElementDiv9();            					} 
                                         
-    if	(MaFonctionDeSelection() === 2)	{
+    if	(SelectionFunction() === 2)	{
          
     	
         								AddElementDiv4();
@@ -586,7 +583,7 @@ function RemoveElementDiv10() {
          								RemoveElementDiv8();
          								RemoveElementDiv9();}  
                                 
-    if	(MaFonctionDeSelection() === 3)	{
+    if	(SelectionFunction() === 3)	{
         
     							
                                 		AddElementDiv7();
@@ -600,7 +597,7 @@ function RemoveElementDiv10() {
          								RemoveElementDiv6();
          								RemoveElementDiv9();
                                					}  
-    if	( MaFonctionDeSelection() === 4)	{
+    if	(SelectionFunction() === 4)	{
         
     									
                                         AddElementDiv4();
@@ -614,7 +611,7 @@ function RemoveElementDiv10() {
                                         RemoveElementDiv6();
          								RemoveElementDiv7();
                                         		}
-         								                             
+
 		document.getElementById("NberApartment" ).value = ""; 
 		document.getElementById("NberFloors" ).value = "";
 		document.getElementById("NberBasements" ).value = ""; 
